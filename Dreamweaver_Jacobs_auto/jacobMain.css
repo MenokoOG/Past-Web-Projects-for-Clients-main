@@ -1,0 +1,186 @@
+@charset "utf-8";
+body {
+	margin: 0;
+	padding: 0;
+	color: #CCFF66;
+	background-color: #C24833;
+	background-image: url(images/page_background.jpg);
+	background-repeat: repeat-x;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	line-height: 1.4;
+	font-weight: bolder;
+}
+
+/* ~~ Element/tag selectors ~~ */
+ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* removing the top margin gets around an issue where margins can escape from their containing div. The remaining bottom margin will hold it away from any elements that follow. */
+	padding-right: 15px;
+	padding-left: 15px; /* adding the padding to the sides of the elements within the divs, instead of the divs themselves, gets rid of any box model math. A nested div with side padding can also be used as an alternate method. */
+}
+a img { /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
+	border: none;
+}
+/* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
+a:link {
+	color: #33FF00;
+	text-decoration: none; /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
+}
+a:visited {
+	color: #CCFF66;
+	text-decoration: none;
+}
+a:hover, a:active, a:focus { /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
+	color: #d2c713;
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: #d2c713;
+}
+
+/* ~~ this fixed width container surrounds the other divs ~~ */
+.container {
+	width: 960px;
+	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout */
+	background-color: #FFF;
+	background-image: url(images/rsz_testo.jpg);
+}
+
+/* ~~ the header is not given a width. It will extend the full width of your layout. It contains an image placeholder that should be replaced with your own linked logo ~~ */
+.header {
+	background-color: #FFFFFF;
+	border-bottom-width: 1px;
+	border-bottom-style: ridge;
+	border-bottom-color: #007cd8;
+	height: 150px;
+	text-align: center;
+	vertical-align: middle;
+	background-image: url(images/head.jpg);
+}
+.header .headtitle {
+	padding-top: 40px;
+	color: #33FF00;
+}
+
+
+/* ~~ This is the layout information. ~~ 
+
+1) Padding is only placed on the top and/or bottom of the div. The elements within this div have padding on their sides. This saves you from any "box model math". Keep in mind, if you add any side padding or border to the div itself, it will be added to the width you define to create the *total* width. You may also choose to remove the padding on the element in the div and place a second div within it with no width and the padding necessary for your design.
+
+*/
+
+.content {
+
+	padding: 10px 0;
+}
+
+.txtcolormain {
+	color: #CCFF66;
+}
+.container .content ul {
+	margin-left: 100px;
+	/* [disabled]border-right-width: 2px; */
+	/* [disabled]border-right-style: solid; */
+	border-bottom-style: outset;
+	/* [disabled]border-right-color: #d2c713; */
+	margin-right: 360px;
+	border-bottom-width: 3px;
+	border-bottom-color: #3FE000;
+}
+
+
+
+/* ~~ The footer ~~ */
+.footer {
+	background-color: #000000;
+	text-align: center;
+	clear: both;
+	padding-top: 10px;
+	padding-right: 0;
+	padding-bottom: 10px;
+	padding-left: 0;
+}
+#racehusk {
+	height: 1000px;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #3FE000;
+}
+#racehusk p .fltlft {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+#racehusk p .fltrt {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.footer p {
+	color: #FFF;
+}
+
+
+/* ~~ miscellaneous float/clear classes ~~ */
+.fltrt {  /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* this class can be used to float an element left in your page. The floated element must precede the element it should be next to on the page. */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* this class can be placed on a <br /> or empty div as the final element following the last floated div (within the #container) if the #footer is removed or taken out of the #container */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+.importText {
+	font-weight: bold;
+}
+.standtext {
+	font-weight: bold;
+	color: #33FF00;
+}
+
+
+.footer a:link,.footer a:visited {
+	color: #fff;
+	text-decoration: none;
+}
+
+.footer a:hover, .footer a:active {
+	color: #fff;
+	border-bottom: 1px dashed #fff;
+	text-align: center;
+}
+.content #merchendise {
+	height: 350px;
+	padding-top: 10px;
+	margin-right: 3px;
+	margin-left: 3px;
+}
+.ctrtext {
+	text-align: center;
+	font-weight: bolder;
+	color: #33FF14;
+}
+.content #specnotice {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #3FE000;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #3FE000;
+	text-align: center;
+	vertical-align: middle;
+	color: #CCFF66;
+	font-weight: normal;
+	font-size: 1.5em;
+}
+.content #specnotice p {
+	padding-top: 8px;
+}

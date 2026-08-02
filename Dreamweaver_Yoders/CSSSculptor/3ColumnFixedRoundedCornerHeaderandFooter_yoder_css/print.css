@@ -1,0 +1,197 @@
+/* It is common to set printer friendly styles such as a white background with black text. */
+body {
+  background-color: #fff;
+  background-image: none;
+  border-color: #000; /* Sets the border color properties for an element using shorthand notation */
+  color: #000;
+  float: none;
+  margin: 0 0 0 0; /* Sets the margin properties for all margins using shorthand notation (top, right, bottom, left) */
+  padding: 0 0 0 0; /* Sets the padding properties for an element using shorthand notation (top, right, bottom, left) */
+  width: auto;
+}
+h1 {
+  background-color: #fff;
+  background-image: none;
+  border-color: #000; /* Sets the border color properties for an element using shorthand notation */
+  color: #000;
+}
+h2 {
+  background-color: #fff;
+  background-image: none;
+  border-color: #000; /* Sets the border color properties for an element using shorthand notation */
+  color: #000;
+}
+h3 {
+  background-color: #fff;
+  background-image: none;
+  border-color: #000; /* Sets the border color properties for an element using shorthand notation */
+  color: #000;
+}
+h4 {
+  background-color: #fff;
+  background-image: none;
+  border-color: #000; /* Sets the border color properties for an element using shorthand notation */
+  color: #000;
+}
+h5 {
+  background-color: #fff;
+  background-image: none;
+  border-color: #000; /* Sets the border color properties for an element using shorthand notation */
+  color: #000;
+}
+h6 {
+  background-color: #fff;
+  background-image: none;
+  border-color: #000; /* Sets the border color properties for an element using shorthand notation */
+  color: #000;
+}
+a,  a:link {
+  background-color: #fff;
+  background-image: none;
+  border-color: #000; /* Sets the border color properties for an element using shorthand notation */
+  color: #000;
+}
+a:visited {
+  background-color: #fff;
+  background-image: none;
+  border-color: #000; /* Sets the border color properties for an element using shorthand notation */
+  color: #000;
+}
+a:hover {
+  background-color: #fff;
+  background-image: none;
+  border-color: #000; /* Sets the border color properties for an element using shorthand notation */
+  color: #000;
+}
+a:focus {
+  background-color: #fff;
+  background-image: none;
+  border-color: #000; /* Sets the border color properties for an element using shorthand notation */
+  color: #000;
+}
+a:active {
+  background-color: #fff;
+  background-image: none;
+  border-color: #000; /* Sets the border color properties for an element using shorthand notation */
+  color: #000;
+}
+#outerWrapper {
+  background-color: #fff;
+  background-image: none;
+  border-color: #000; /* Sets the border color properties for an element using shorthand notation */
+  color: #000;
+  float: none;
+  margin: 0 0 0 0; /* Sets the margin properties for all margins using shorthand notation (top, right, bottom, left) */
+  padding: 0 0 0 0; /* Sets the padding properties for an element using shorthand notation (top, right, bottom, left) */
+  width: auto;
+}
+#outerWrapper #headerBackground {
+  background-color: #fff;
+  background-image: none;
+  border-color: #000; /* Sets the border color properties for an element using shorthand notation */
+  color: #000;
+  float: none;
+  margin: 0 0 0 0; /* Sets the margin properties for all margins using shorthand notation (top, right, bottom, left) */
+  padding: 0 0 0 0; /* Sets the padding properties for an element using shorthand notation (top, right, bottom, left) */
+  width: auto;
+}
+#outerWrapper #headerBackground #headerBottom {
+  background-color: #fff;
+  background-image: none;
+  border-color: #000; /* Sets the border color properties for an element using shorthand notation */
+  color: #000;
+  float: none;
+  margin: 0 0 0 0; /* Sets the margin properties for all margins using shorthand notation (top, right, bottom, left) */
+  padding: 0 0 0 0; /* Sets the padding properties for an element using shorthand notation (top, right, bottom, left) */
+  width: auto;
+}
+#outerWrapper #headerBackground #headerBottom #headerTop {
+  background-color: #fff;
+  background-image: none;
+  border-color: #000; /* Sets the border color properties for an element using shorthand notation */
+  color: #000;
+  float: none;
+  margin: 0 0 0 0; /* Sets the margin properties for all margins using shorthand notation (top, right, bottom, left) */
+  padding: 0 0 0 0; /* Sets the padding properties for an element using shorthand notation (top, right, bottom, left) */
+  width: auto;
+}
+#outerWrapper #contentWrapper {
+  background-color: #fff;
+  background-image: none;
+  border-color: #000; /* Sets the border color properties for an element using shorthand notation */
+  color: #000;
+  float: none;
+  margin: 0 0 0 0; /* Sets the margin properties for all margins using shorthand notation (top, right, bottom, left) */
+  padding: 0 0 0 0; /* Sets the padding properties for an element using shorthand notation (top, right, bottom, left) */
+  width: auto;
+}
+#outerWrapper #contentWrapper #rightColumn1 {
+  background-color: #fff;
+  background-image: none;
+  border-color: #000; /* Sets the border color properties for an element using shorthand notation */
+  color: #000;
+  float: none;
+  margin: 0 0 0 0; /* Sets the margin properties for all margins using shorthand notation (top, right, bottom, left) */
+  padding: 0 0 0 0; /* Sets the padding properties for an element using shorthand notation (top, right, bottom, left) */
+  width: auto;
+}
+#outerWrapper #contentWrapper #leftColumn1 {
+  background-color: #fff;
+  background-image: none;
+  border-color: #000; /* Sets the border color properties for an element using shorthand notation */
+  color: #000;
+  float: none;
+  margin: 0 0 0 0; /* Sets the margin properties for all margins using shorthand notation (top, right, bottom, left) */
+  padding: 0 0 0 0; /* Sets the padding properties for an element using shorthand notation (top, right, bottom, left) */
+  width: auto;
+}
+#outerWrapper #contentWrapper #content {
+  background-color: #fff;
+  background-image: none;
+  border-color: #000; /* Sets the border color properties for an element using shorthand notation */
+  color: #000;
+  float: none;
+  margin: 0 0 0 0; /* Sets the margin properties for all margins using shorthand notation (top, right, bottom, left) */
+  padding: 0 0 0 0; /* Sets the padding properties for an element using shorthand notation (top, right, bottom, left) */
+  width: auto;
+}
+#outerWrapper #contentWrapper #clearFloat {
+  background-color: #fff;
+  background-image: none;
+  border-color: #000; /* Sets the border color properties for an element using shorthand notation */
+  color: #000;
+  float: none;
+  margin: 0 0 0 0; /* Sets the margin properties for all margins using shorthand notation (top, right, bottom, left) */
+  padding: 0 0 0 0; /* Sets the padding properties for an element using shorthand notation (top, right, bottom, left) */
+  width: auto;
+}
+#outerWrapper #footerBackground {
+  background-color: #fff;
+  background-image: none;
+  border-color: #000; /* Sets the border color properties for an element using shorthand notation */
+  color: #000;
+  float: none;
+  margin: 0 0 0 0; /* Sets the margin properties for all margins using shorthand notation (top, right, bottom, left) */
+  padding: 0 0 0 0; /* Sets the padding properties for an element using shorthand notation (top, right, bottom, left) */
+  width: auto;
+}
+#outerWrapper #footerBackground #footerBottom {
+  background-color: #fff;
+  background-image: none;
+  border-color: #000; /* Sets the border color properties for an element using shorthand notation */
+  color: #000;
+  float: none;
+  margin: 0 0 0 0; /* Sets the margin properties for all margins using shorthand notation (top, right, bottom, left) */
+  padding: 0 0 0 0; /* Sets the padding properties for an element using shorthand notation (top, right, bottom, left) */
+  width: auto;
+}
+#outerWrapper #footerBackground #footerBottom #footerTop {
+  background-color: #fff;
+  background-image: none;
+  border-color: #000; /* Sets the border color properties for an element using shorthand notation */
+  color: #000;
+  float: none;
+  margin: 0 0 0 0; /* Sets the margin properties for all margins using shorthand notation (top, right, bottom, left) */
+  padding: 0 0 0 0; /* Sets the padding properties for an element using shorthand notation (top, right, bottom, left) */
+  width: auto;
+}

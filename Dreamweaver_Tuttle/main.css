@@ -1,0 +1,130 @@
+@charset "utf-8";
+body {
+	margin: 0px;
+	padding: 0px;
+	background-color: #CCC;
+}
+#wrapper {
+	width: 930px;
+	height: 1400px;
+	padding: 0;
+	position: relative;
+	background-image: url(images/background.jpg);
+	text-align: left;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+	clear: both;
+}
+#contactInfo {
+	font-size: 2em;
+	padding-top: 5px;
+	padding-left: 200px;
+	color: #FFF;
+	margin-top: 295px;
+}
+
+
+#mainContent {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 1.1em;
+	width: 700px;
+	padding-top: 265px;
+	/* [disabled]padding-left: 100px; */
+	height: 430px;
+	margin-left: 125px;
+	vertical-align: middle;
+}
+a:link, a:visited {
+	color: #fff;
+	text-decoration: none;
+}
+
+a:hover, a:active {
+	color: #fff;
+	border-bottom: 1px dashed #fff;
+	text-align: center;
+}
+#wrapper #contactInfo p {
+
+}
+#wrapper #coupon {
+	padding-top: 170px;
+	padding-left: 260px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 1.8em;
+	color: #303;
+	padding-bottom: 20px;
+}
+#contactInfo #contactus {
+	padding-left: 190px;
+}
+#contactInfo #number {
+	padding-left: 145px;
+}
+#mainContent #img2 {
+	float: right;
+	margin-top: 40px;
+}
+#mainContent #img1 {
+	float: left;
+	margin-top: 40px;
+}
+#mainContent p {
+	text-align: center;
+}
+.marspec {
+	font-size: 1em;
+	color: #603;
+	font-weight: bold;
+}
+
+#contactInfo #estimate {
+	padding-left: 80px;
+}
+#contactInfo #mail {
+	padding-left: 40px;
+}
+#wrapper #mainContent #specp {
+	font-weight: 800;
+	font-size: 1.7em;
+}
+#eXTReMe {
+	text-align: center;
+}
+#wrapper #mainContent p strong #Visa {
+	margin-right: 15px;
+}
+#wrapper #mainContent p #mastercard {
+	margin-left: 15px;
+}
+#wrapper #mainContent marquee .marspec a {
+	font-size: 1.2em;
+	color: #00F;
+}
+}
+#wrapper #mainContent marquee .marspec a:link, a:visited {
+	color: #00F;
+	text-decoration: none;
+}
+
+#wrapper #mainContent marquee .marspec a:hover, a:active {
+	color: #F00;
+	text-align: center;
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: #F00;
+}
+#wrapper #mainContent p strong #card {
+	margin-right: 15px;
+}
+#footer {
+	clear: both;
+	text-align: center;
+	width: 930px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #666;
+	color: #FFF;
+}

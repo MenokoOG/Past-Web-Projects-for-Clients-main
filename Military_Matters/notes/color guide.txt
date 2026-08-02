@@ -1,0 +1,14 @@
+#193742 : dark blue | use for main headers & most paragraph rules
+
+#e1d8b9 : sand accent | use for most area background colors
+
+#cb7d20 : orange accent | use for links & rollovers
+
+#51341a : brown | use for secondary headers
+
+#995522 : dark orange | use for links or high contrast accents
+
+ and special notes
+#3c6b92 : main blue | use for page background, footer background
+
+#333: neutral gray | use for body copy

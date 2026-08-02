@@ -1,0 +1,9 @@
+
+-shift + F7 is spell checker.
+
+-screenshot dimensions 650w x 350h
+
+-build content directly on the page. remeber to clean up the code.-spell check documents.
+
+-changed the containeer to 100% the original size was 80%
+

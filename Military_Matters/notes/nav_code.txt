@@ -1,0 +1,47 @@
+<ul class="nav">
+    <li><a href="index.html">Home</a></li>
+      <li><a href="../getstart.html">Getting Started</a></li>
+      <li><a href="../create.html">Creating a Site</a></li>
+      <li><a href="../firstweb.html">First Web Page</a></li>
+      <li><a href="../pagetwo.html">Layout and CSS</a></li>
+      <li><a href="../buildlay.html">Build the Layout</a></li>
+      <li><a href="../page3.html">Position the Layout</a></li>
+      <li><a href="../addnav.html">Adding Navigation</a></li>
+      <li><a href="../text.html">Text Content</a></li>
+      <li><a href="../page1.html">Images</a></li>
+      <li><a href="../hpyerlinks.html">Hyperlinks</a></li>
+      <li><a href="../templates.html">Make a Template</a></li>
+      <li><a href="../addpage.html">Add a Page</a></li>
+      <li><a href="../other.html">Other Features</a></li>
+      <li><a href="../refer.html">References</a></li>
+    </ul>
+	
+	CSS for nav
+	
+	ul.nav {
+	list-style: none; 
+	margin-bottom: 15px; 
+	border-top-width: 1px;
+	border-top-style: none;
+	border-top-color: #666;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+}
+
+ul.nav li {
+	border-bottom: 1px solid #666; 
+}
+
+ul.nav a, ul.nav a:visited { 
+	padding: 5px 5px 5px 15px;
+	display: block; 
+	text-decoration: none;
+	color: #995522;
+	background-color: #FFFFFF;
+}
+
+ul.nav a:hover, ul.nav a:active, ul.nav a:focus { 
+	background: #cb7d20;
+	color: #FFF;
+}

@@ -1,0 +1,21 @@
+
+
+
+
+<div id="linko">
+    <h2 class="headlist">Tools we use:</h2>
+    <ul>
+      <li><a href="http://www.adobe.com/products/creativesuite/mastercollection.html">Adobe Master Collection</a></li>
+      <li><a href="http://notepad-plus-plus.org/">Notepad ++</a></li>
+      <li><a href="http://www.webassist.com/">WebAssist</a></li>
+      <li><a href="http://www.joomlaxtc.com/">Joomla! XTC</a></li>
+      <li><a href="http://www.joomla.org/">Joomla!</a></li>
+      <li><a href="http://wordpress.org/">WordPress</a></li>
+      <li><a href="http://www.oscommerce.com/">osCommerce</a></li>
+      <li><a href="http://www.prestashop.com/">PrestaShop</a></li>
+      <li><a href="http://www.mysql.com/">MySQL</a></li>
+      <li><a href="http://www.php.net/">PHP</a></li>
+      <li><a href="http://www.apachefriends.org/en/xampp.html">XAMPP</a></li>
+    </ul>
+    <p class="btmln"></p>
+    </div>

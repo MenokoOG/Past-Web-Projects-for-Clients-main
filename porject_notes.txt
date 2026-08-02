@@ -1,0 +1,66 @@
+***for icon*****
+<link href="./images/half_life.ico" rel="icon">
+
+<img src="./images/menoko OG.png" height="200" alt="Menoko OG" />
+
+****project links on github index html*******
+EASEL FORGE
+"C:\SE\gitHub_repo\menoko_old_web_github\Easel_Forge\index.html"
+
+ends up being ./Easel_Forge/index.html
+
+DESIGNER J
+"C:\SE\gitHub_repo\menoko_old_web_github\Designer_J_website_old\Designer_J_website_old\index.html"
+
+./Designer_J_website_old/Designer_J_website_old/index.html
+
+MILITARY MATTERS
+"C:\SE\gitHub_repo\menoko_old_web_github\Military_Matters\index.html"
+
+./Military_Matters/index.html
+
+NEWS BF
+"C:\SE\gitHub_repo\menoko_old_web_github\newsbf_Dreamweaver_test\index.html"
+
+./newsbf_Dreamweaver_test/index.html
+
+RMC
+"C:\SE\gitHub_repo\menoko_old_web_github\RMC_project\index.html"
+
+./RMC_project/index.html
+
+RunFor THE FALLEN
+"C:\SE\gitHub_repo\menoko_old_web_github\Run_For_the_Fallen_Idaho\index.html"
+
+./Run_For_the_Fallen_Idaho/index.html
+
+YODERS
+"C:\SE\gitHub_repo\menoko_old_web_github\Dreamweaver_Yoders\index.html"
+
+./Dreamweaver_Yoders/index.html
+
+MY RESUME
+"C:\SE\gitHub_repo\menoko_old_web_github\my_resume_menoko\index.html"
+
+./my_resume_menoko/index.html
+
+TUTTLES
+"C:\SE\gitHub_repo\menoko_old_web_github\Dreamweaver_Tuttle\index.html"
+
+./Dreamweaver_Tuttle/index.html
+
+JACOBS AUTO
+"C:\SE\gitHub_repo\menoko_old_web_github\Dreamweaver_Jacobs_auto\index.html"
+
+./Dreamweaver_Jacobs_auto/index.html
+
+****Lorum ipsum******
+https://baconipsum.com/
+
+https://www.broipsum.com/
+
+https://hipsum.co/
+
+
+
+
