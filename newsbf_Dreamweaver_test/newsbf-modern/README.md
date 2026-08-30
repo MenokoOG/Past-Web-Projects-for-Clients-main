@@ -137,12 +137,45 @@ scroll sideways.
 
 ---
 
+## Deployment
+
+The demo is live inside the portfolio it belongs to:
+
+**<https://menokoog.github.io/Past-Web-Projects-for-Clients-main/protocol-droid/>**
+
+GitHub Pages serves this repository from the `main` branch at the repository
+root, and the portfolio is entirely committed static files. The built demo
+follows that convention rather than introducing a second host: `npm run build`
+writes to `protocol-droid/` at the repository root, which is committed.
+
+Two settings in [`vite.config.ts`](vite.config.ts) make that work:
+
+- `base` is set to the Pages sub-path for production builds and left at `/` in
+  development, so assets resolve under `/Past-Web-Projects-for-Clients-main/protocol-droid/`.
+- `outDir` points at the repository root, with `emptyOutDir` opted into
+  because the target sits outside the Vite root.
+
+Routing is hash-based, so no server rewrite rule is needed — the build also
+works opened straight from disk. A `.nojekyll` file at the repository root
+keeps Pages from running the output through Jekyll.
+
+**To publish a change:**
+
+```bash
+npm run build          # rewrites protocol-droid/ at the repo root
+git add ../../protocol-droid && git commit -m "Rebuild protocol droid demo"
+git push               # Pages redeploys from main
+```
+
+The demo is reached from the portfolio home page in two places: the sidebar
+menu and a feature post above the fold.
+
 ## Scripts
 
 | Command | Does |
 | --- | --- |
 | `npm run dev` | Vite dev server on :5173 |
-| `npm run build` | Type-check, then production build to `dist/` |
+| `npm run build` | Type-check, then build to `protocol-droid/` at the repo root |
 | `npm run preview` | Serve the built output |
 | `npm run typecheck` | `tsc --noEmit` |
 
