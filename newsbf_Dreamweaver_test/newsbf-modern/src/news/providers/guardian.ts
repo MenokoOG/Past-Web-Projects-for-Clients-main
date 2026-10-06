@@ -11,10 +11,13 @@ import { secureUrl, stripHtml, truncate } from '@/lib/text'
 /**
  * The Guardian Open Platform.
  *
- * Chosen as the default because it is the only general-interest wire service
- * with a genuinely keyless entry point: the documented public `test` key needs
- * no registration, so a fresh clone of this repo renders real news on the first
- * `npm run dev`. Supply VITE_GUARDIAN_API_KEY to lift the rate limit.
+ * Needs a free developer key (VITE_GUARDIAN_API_KEY, register at
+ * https://open-platform.theguardian.com/access/). It used to be the keyless
+ * default via the documented public `test` key, but that key now answers
+ * 401 Unauthorized. A 401 carries no CORS headers, so in a browser it showed up
+ * as a misleading CORS error, and the droid silently fell back on every load.
+ * Without a key this provider reports itself unavailable, with the fix stated,
+ * instead of making a request that is certain to fail.
  */
 const ENDPOINT = 'https://content.guardianapis.com/search'
 
@@ -89,18 +92,21 @@ interface GuardianEnvelope {
 
 function apiKey(): string {
   const configured = import.meta.env.VITE_GUARDIAN_API_KEY as string | undefined
-  return configured?.trim() || 'test'
+  return configured?.trim() ?? ''
 }
 
 export const guardianProvider: NewsProvider = {
   id: 'guardian',
   label: 'The Guardian',
   homepage: 'https://open-platform.theguardian.com/',
-  keyless: true,
+  keyless: false,
 
-  unavailableReason: () => null,
+  unavailableReason: () =>
+    apiKey()
+      ? null
+      : 'Set VITE_GUARDIAN_API_KEY in .env.local. Free developer key at open-platform.theguardian.com.',
 
-  fidelity: (sectionId) => DESKS[sectionId].fidelity,
+  fidelity: (sectionId) => (apiKey() ? DESKS[sectionId].fidelity : 'unsupported'),
 
   describeQuery: (sectionId) => DESKS[sectionId].rationale,
 

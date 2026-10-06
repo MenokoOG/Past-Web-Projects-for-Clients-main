@@ -165,7 +165,7 @@ async function fallback(
   limit: number,
   signal: AbortSignal | undefined,
 ): Promise<FetchResult> {
-  const candidates: readonly ProviderId[] = ['guardian', 'spaceflight', 'hackernews']
+  const candidates: readonly ProviderId[] = ['spaceflight', 'hackernews', 'guardian']
   const next = candidates.find(
     (id) => id !== failedId && getProvider(id).unavailableReason() === null,
   )
