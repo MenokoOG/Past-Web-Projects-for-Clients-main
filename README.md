@@ -55,12 +55,13 @@ rewrites the request as a keyword search, then tells you it did rather than
 quietly pretending the result is equivalent:
 
 ```
-HANDSHAKE   Switching protocol to Hacker News.
-            The Guardian → Hacker News. The reading experience does not
-            change; only the dialect behind it does.
-TRANSLATE   Translating "Obituaries" into a dialect Hacker News understands.
-            no desks upstream — rewritten as search "in memoriam"
-COMPLETE    12 articles translated into the house format.            379ms
+HANDSHAKE   Opening a channel to Spaceflight News.
+            Requesting the Obituaries desk, 12 items.
+TRANSLATE   Translating "Obituaries" into a dialect Spaceflight News understands.
+            no desks upstream — rewritten as search "memorial"
+COMPLETE    12 articles translated into the house format.            730ms
+            Spaceflight News → Article[]. Fields normalized: title, summary,
+            byline, image, published date.
 ```
 
 The log shows every handshake, translation, cache hit, fault and fallback as it
@@ -71,8 +72,8 @@ layer.
 
 | Source | Key needed | Role |
 | --- | --- | --- |
-| **The Guardian** | none | Default. Real general news with sections, bylines and images |
-| **Spaceflight News** | none | Keyless and image-rich, but has no desks — the translation stress case |
+| **The Guardian** | required | Real general news with sections, bylines and images. Needs a free developer key; the old public `test` key now returns 401, so without one the droid reports it as unavailable |
+| **Spaceflight News** | none | Default. Keyless, CORS-open and image-rich, but has no desks, which makes it the translation stress case |
 | **Hacker News** | none | The lossiest source: no images, no summaries. Proves the cards degrade rather than break |
 | **GNews** | optional | Free tier, 100 requests/day |
 | **NewsAPI.org** | optional | Free plan is localhost-only — the droid reports that restriction up front |

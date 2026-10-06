@@ -13,14 +13,15 @@ import { newsApiProvider } from './providers/newsapi'
  * file and one entry here; nothing in the UI needs to know.
  */
 export const PROVIDERS: readonly NewsProvider[] = [
-  guardianProvider,
   spaceflightProvider,
   hackerNewsProvider,
+  guardianProvider,
   gnewsProvider,
   newsApiProvider,
 ]
 
-export const DEFAULT_PROVIDER_ID: ProviderId = 'guardian'
+/** Keyless and CORS-open, so a fresh clone and the hosted demo both render real news. */
+export const DEFAULT_PROVIDER_ID: ProviderId = 'spaceflight'
 
 const BY_ID = new Map<ProviderId, NewsProvider>(PROVIDERS.map((p) => [p.id, p]))
 

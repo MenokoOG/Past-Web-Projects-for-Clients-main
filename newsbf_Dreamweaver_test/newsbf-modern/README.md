@@ -13,9 +13,7 @@ npm install
 npm run dev
 ```
 
-Then open <http://localhost:5173>. Real articles load immediately — the default
-provider is The Guardian's Open Platform, reached through its documented public
-`test` key.
+Then open <http://localhost:5173>. Real articles load immediately: the default provider is Spaceflight News, which needs no key and allows requests from the browser.
 
 ---
 
@@ -72,8 +70,8 @@ Nothing here is scripted; each line is emitted by real code in
 
 | Provider | Key | Notes |
 | --- | --- | --- |
-| **The Guardian** | none | Default. General news with real sections and images, via the public `test` key. |
-| **Spaceflight News** | none | Keyless and image-rich, but has no desks at all — the stress case for translation. |
+| **The Guardian** | `VITE_GUARDIAN_API_KEY` | General news with real sections and images. Needs a free developer key; the old public `test` key now returns 401, so without one the droid reports it as unavailable and says how to fix it. |
+| **Spaceflight News** | none | Default. Keyless, CORS-open and image-rich, but has no desks at all, which makes it the stress case for translation. |
 | **Hacker News** | none | The lossiest source: no images, no summaries. Proves the cards degrade gracefully. |
 | **GNews** | `VITE_GNEWS_API_KEY` | Free tier, 100 requests/day. |
 | **NewsAPI.org** | `VITE_NEWSAPI_KEY` | Free plan is localhost-only; the droid reports that restriction up front. |

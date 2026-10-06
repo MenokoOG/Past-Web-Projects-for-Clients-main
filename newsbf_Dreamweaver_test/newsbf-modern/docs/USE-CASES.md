@@ -199,18 +199,15 @@ own sake. The ledger turns the work into an itemized account.
 | GNews | `Translated` | `q=obituary` |
 | NewsAPI | `Translated` | `everything?q=obituary` |
 
-Observed transmission log, switching to Hacker News on that desk:
+Observed transmission log, Obituaries desk on the default source (Spaceflight News):
 
 ```
-HANDSHAKE   Switching protocol to Hacker News.
-            The Guardian → Hacker News. The reading experience does not
-            change; only the dialect behind it does.
-HANDSHAKE   Opening a channel to Hacker News.
+HANDSHAKE   Opening a channel to Spaceflight News.
             Requesting the Obituaries desk, 12 items.
-TRANSLATE   Translating "Obituaries" into a dialect Hacker News understands.
-            no desks upstream — rewritten as search "in memoriam"
-COMPLETE    12 articles translated into the house format.            379ms
-            Hacker News → Article[]. Fields normalized: title, summary,
+TRANSLATE   Translating "Obituaries" into a dialect Spaceflight News understands.
+            no desks upstream — rewritten as search "memorial"
+COMPLETE    12 articles translated into the house format.            730ms
+            Spaceflight News → Article[]. Fields normalized: title, summary,
             byline, image, published date.
 ```
 
