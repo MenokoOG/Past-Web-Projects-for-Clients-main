@@ -1,8 +1,8 @@
-# Use cases — the NB-3O protocol droid
+# Use cases: the NB-3O protocol droid
 
 **System:** News Bonners Ferry, modernized
-**Legacy build:** `../` — Dreamweaver, XHTML 1.0 Transitional, 2012
-**Modern build:** `newsbf-modern/` — TypeScript, React, Tailwind, mobile-first
+**Legacy build:** `../`: Dreamweaver, XHTML 1.0 Transitional, 2012
+**Modern build:** `newsbf-modern/`: TypeScript, React, Tailwind, mobile-first
 **Live content:** free news APIs, keyless by default
 
 ---
@@ -62,7 +62,7 @@ languages and refuses to let either one leak into the other.
 
 ---
 
-## UC-01 — Read the paper on a phone
+## UC-01: Read the paper on a phone
 
 **Primary actor:** Reader
 **Goal:** Find out what happened locally, on the device actually in their hand.
@@ -82,9 +82,9 @@ languages and refuses to let either one leak into the other.
 
 **Alternate flows**
 
-- **A1** — A story has no image, or its image fails to load →
+- **A1**: A story has no image, or its image fails to load →
   the card reflows into its text-only form instead of showing a broken icon.
-- **A2** — The desk was read within the last five minutes →
+- **A2**: The desk was read within the last five minutes →
   it is served from memory and no network request is made.
 
 **Postconditions**
@@ -107,7 +107,7 @@ everything else is consequence.
 
 ---
 
-## UC-02 — Explain the modernization
+## UC-02: Explain the modernization
 
 **Primary actor:** Publisher or stakeholder
 **Goal:** Understand what changed, where, and why it was worth doing.
@@ -120,13 +120,13 @@ everything else is consequence.
 
 1. The stakeholder opens NB-3O and lands on the **Ledger** tab.
 2. The droid lists all 16 findings from the audit of the legacy build.
-3. The stakeholder filters by area — layout, accessibility, analytics, and so on.
+3. The stakeholder filters by area, layout, accessibility, analytics, and so on.
 4. Expanding a finding shows: the legacy behaviour, its file, the replacement,
    its file, and the rationale in plain language.
 
 **Alternate flows**
 
-- **A1** — The stakeholder would rather see the problem than read about it →
+- **A1**: The stakeholder would rather see the problem than read about it →
   the **Protocols** tab overlays the old 1000px canvas on the live page and
   reports how far it overflows the current viewport in pixels.
 
@@ -155,7 +155,7 @@ own sake. The ledger turns the work into an itemized account.
 
 ---
 
-## UC-03 — Translate a foreign wire
+## UC-03: Translate a foreign wire
 
 **Primary actor:** NB-3O (system)
 **Goal:** Turn any upstream provider's payload into the newsroom's own `Article` shape.
@@ -170,17 +170,17 @@ own sake. The ledger turns the work into an itemized account.
 1. The droid opens a channel to the provider and logs the **handshake**.
 2. It maps the desk name onto that provider's vocabulary and logs the
    **translation**, marking it `Native` or `Translated`.
-3. The response is normalized — markup stripped from titles and summaries,
+3. The response is normalized, markup stripped from titles and summaries,
    images forced to https, dates converted to ISO-8601, bylines flattened.
 4. The result is cached under `provider:desk:pageSize` and returned to the view.
 
 **Alternate flows**
 
-- **A1** — The provider has no equivalent of the requested desk →
+- **A1**: The provider has no equivalent of the requested desk →
   the droid rewrites the desk as a keyword query and labels the result
   `Translated` rather than `Native`, so the approximation is visible instead of
   silent.
-- **A2** — The provider carries no summaries or images at all, as Hacker News
+- **A2**: The provider carries no summaries or images at all, as Hacker News
   does → the droid synthesizes a summary from the available metadata and the
   card degrades to its text-only form.
 
@@ -189,7 +189,7 @@ own sake. The ledger turns the work into an itemized account.
 - The view layer has never seen a vendor field name.
 - Adding a sixth provider requires one new file and one registry entry.
 
-**Worked example — the Obituaries desk**
+**Worked example, the Obituaries desk**
 
 | Provider | Fidelity | Query the droid actually sends |
 | --- | --- | --- |
@@ -205,7 +205,7 @@ Observed transmission log, Obituaries desk on the default source (Spaceflight Ne
 HANDSHAKE   Opening a channel to Spaceflight News.
             Requesting the Obituaries desk, 12 items.
 TRANSLATE   Translating "Obituaries" into a dialect Spaceflight News understands.
-            no desks upstream — rewritten as search "memorial"
+            no desks upstream, rewritten as search "memorial"
 COMPLETE    12 articles translated into the house format.            730ms
             Spaceflight News → Article[]. Fields normalized: title, summary,
             byline, image, published date.
@@ -219,7 +219,7 @@ boundary at which a source could be changed.
 
 ---
 
-## UC-04 — Swap the news source at runtime
+## UC-04: Swap the news source at runtime
 
 **Primary actor:** Developer or evaluator
 **Goal:** Prove the data layer is genuinely decoupled from the presentation.
@@ -239,10 +239,10 @@ boundary at which a source could be changed.
 
 **Alternate flows**
 
-- **A1** — The provider requires an API key that is not configured → it is
+- **A1**: The provider requires an API key that is not configured → it is
   listed as unavailable with the exact environment variable to set, and cannot
   be selected.
-- **A2** — The provider is keyed but the origin is not localhost, as on the free
+- **A2**: The provider is keyed but the origin is not localhost, as on the free
   NewsAPI plan → the droid reports the origin restriction up front rather than
   letting it surface as an opaque CORS failure after deployment.
 
@@ -257,7 +257,7 @@ it in front of the person asking.
 
 ---
 
-## UC-05 — Survive an upstream failure
+## UC-05: Survive an upstream failure
 
 **Primary actor:** NB-3O (system)
 **Goal:** Keep the desks filled when a provider stops answering.
@@ -275,9 +275,9 @@ it in front of the person asking.
 
 **Alternate flows**
 
-- **A1** — No provider is reachable at all → the desk shows an explicit error
+- **A1**: No provider is reachable at all → the desk shows an explicit error
   with a retry control, rather than an empty page that looks like a bug.
-- **A2** — The reader navigates away mid-request → the request is aborted and
+- **A2**: The reader navigates away mid-request → the request is aborted and
   nothing is logged, so the log never reports completions for pages the reader
   has already left.
 
@@ -317,4 +317,4 @@ scope of a production newspaper.
 | UC-02 | [`ledger.ts`](../src/droid/ledger.ts), [`LedgerTab.tsx`](../src/droid/LedgerTab.tsx), [`LegacyGuide.tsx`](../src/droid/LegacyGuide.tsx) |
 | UC-03 | [`client.ts`](../src/news/client.ts), [`providers/`](../src/news/providers/), [`log.ts`](../src/droid/log.ts) |
 | UC-04 | [`registry.ts`](../src/news/registry.ts), [`ProtocolsTab.tsx`](../src/droid/ProtocolsTab.tsx), [`DroidContext.tsx`](../src/droid/DroidContext.tsx) |
-| UC-05 | [`client.ts`](../src/news/client.ts) — `fallback()`, [`useArticles.ts`](../src/hooks/useArticles.ts) |
+| UC-05 | [`client.ts`](../src/news/client.ts), `fallback()`, [`useArticles.ts`](../src/hooks/useArticles.ts) |

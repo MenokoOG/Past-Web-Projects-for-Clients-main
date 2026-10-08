@@ -2,7 +2,7 @@ import { useSyncExternalStore } from 'react'
 
 /**
  * Reads a media query reactively. Used to decide whether the droid panel
- * behaves as a bottom sheet (mobile) or a side rail (desktop) — a structural
+ * behaves as a bottom sheet (mobile) or a side rail (desktop), a structural
  * difference that CSS alone cannot express, since the two need different
  * focus and dismissal behaviour.
  */

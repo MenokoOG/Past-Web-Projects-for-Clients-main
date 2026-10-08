@@ -44,7 +44,7 @@ export interface LedgerEntry {
   /** Where the replacement lives in this app. */
   readonly modernPath: string
   readonly category: LedgerCategory
-  /** Why the change matters — the part a stakeholder actually reads. */
+  /** Why the change matters: the part a stakeholder actually reads. */
   readonly rationale: string
 }
 

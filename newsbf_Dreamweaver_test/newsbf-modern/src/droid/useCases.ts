@@ -66,7 +66,7 @@ export const USE_CASES: readonly UseCase[] = [
     mainFlow: [
       'The stakeholder opens NB-3O and lands on the Ledger tab.',
       'The droid lists every finding from the audit of the legacy build.',
-      'The stakeholder filters by area — layout, accessibility, analytics, and so on.',
+      'The stakeholder filters by area, layout, accessibility, analytics, and so on.',
       'Expanding a finding shows the legacy behaviour, its file, the replacement, its file, and the rationale in plain language.',
     ],
     alternateFlows: [

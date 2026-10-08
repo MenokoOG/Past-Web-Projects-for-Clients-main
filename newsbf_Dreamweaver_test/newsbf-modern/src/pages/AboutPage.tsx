@@ -33,7 +33,7 @@ export function AboutPage() {
           </div>
 
           <p className="mt-4 leading-relaxed text-muted">
-            This is a working rebuild of a newspaper site authored in Dreamweaver in 2012 — XHTML
+            This is a working rebuild of a newspaper site authored in Dreamweaver in 2012: XHTML
             Transitional, a 1000px fixed canvas, three floated columns, editable regions belonging
             to a content management service that no longer exists, and a Google Analytics tag that
             was switched off in 2023. The rebuild is TypeScript and Tailwind, mobile-first, with

@@ -32,8 +32,8 @@ export interface RecordInput {
  * Two identical transmissions this close together are always an artifact
  * rather than news: React's StrictMode invokes effects twice in development,
  * and a page holding several desks re-reads the cache on every render pass.
- * Collapsing them keeps the handshake and translation lines — the ones worth
- * reading — from being buried under repeats.
+ * Collapsing them keeps the handshake and translation lines, the ones worth
+ * reading, from being buried under repeats.
  */
 const DEDUPE_WINDOW_MS = 2_000
 

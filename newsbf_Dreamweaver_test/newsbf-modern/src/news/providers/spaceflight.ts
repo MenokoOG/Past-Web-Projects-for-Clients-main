@@ -3,7 +3,7 @@ import { NewsProviderError } from '../types'
 import { secureUrl, stripHtml, truncate } from '@/lib/text'
 
 /**
- * Spaceflight News API v4 — keyless, CORS-open, and image-rich.
+ * Spaceflight News API v4: keyless, CORS-open, and image-rich.
  *
  * It has no concept of desks at all, which makes it the useful stress case for
  * the droid: every section except the front page has to be rewritten as a
@@ -50,7 +50,7 @@ export const spaceflightProvider: NewsProvider = {
     const keyword = KEYWORDS[sectionId]
     return keyword === null
       ? 'newest articles, unfiltered'
-      : `no desks upstream — rewritten as search "${keyword}"`
+      : `no desks upstream, rewritten as search "${keyword}"`
   },
 
   async fetchSection({ sectionId, limit, signal }: ProviderRequest) {

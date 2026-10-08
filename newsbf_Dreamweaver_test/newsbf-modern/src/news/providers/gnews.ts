@@ -3,7 +3,7 @@ import { NewsProviderError } from '../types'
 import { secureUrl, stripHtml, truncate } from '@/lib/text'
 
 /**
- * GNews.io — free tier, 100 requests/day, but it requires registration.
+ * GNews.io: free tier, 100 requests/day, but it requires registration.
  *
  * Registered here to prove the registry handles *conditional* providers: the
  * droid reports it as unavailable, with an actionable reason, until a key
@@ -52,7 +52,7 @@ export const gnewsProvider: NewsProvider = {
   keyless: false,
 
   unavailableReason: () =>
-    apiKey() ? null : 'Set VITE_GNEWS_API_KEY in .env.local — free tier at gnews.io.',
+    apiKey() ? null : 'Set VITE_GNEWS_API_KEY in .env.local, free tier at gnews.io.',
 
   fidelity: (sectionId) => (apiKey() ? DESKS[sectionId].fidelity : 'unsupported'),
 
@@ -60,7 +60,7 @@ export const gnewsProvider: NewsProvider = {
     const desk = DESKS[sectionId]
     return desk.kind === 'category'
       ? `category = ${desk.value}`
-      : `no matching category — rewritten as search ${desk.value}`
+      : `no matching category, rewritten as search ${desk.value}`
   },
 
   async fetchSection({ sectionId, limit, signal }: ProviderRequest) {

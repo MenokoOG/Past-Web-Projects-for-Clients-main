@@ -10,10 +10,10 @@ import tailwindcss from '@tailwindcss/vite'
  *
  * Two consequences are configured here:
  *
- *   base    — in production the app is served from a sub-path, not from the
+ *   base   , in production the app is served from a sub-path, not from the
  *             domain root, so asset URLs have to be rewritten. In development
  *             it stays at `/` so `npm run dev` behaves normally.
- *   outDir  — the build lands in `protocol-droid/` at the repository root,
+ *   outDir , the build lands in `protocol-droid/` at the repository root,
  *             beside the other project folders, which is what gives the demo
  *             a short URL to hand to people.
  *

@@ -30,7 +30,7 @@ interface ProtocolsTabProps {
  * desk currently on screen.
  *
  * Switching provider here re-renders the same page from a different upstream
- * wire format — which is the whole demonstration. The reading experience is
+ * wire format, which is the whole demonstration. The reading experience is
  * unchanged; only the dialect behind it moves.
  */
 export function ProtocolsTab({ sectionId }: ProtocolsTabProps) {
@@ -110,7 +110,7 @@ export function ProtocolsTab({ sectionId }: ProtocolsTabProps) {
         <p className="mt-1 text-xs text-muted">
           {viewportWidth < LEGACY_CANVAS_PX
             ? `The old site would be overflowing by ${LEGACY_CANVAS_PX - viewportWidth}px right now, with no viewport tag to scale it down.`
-            : 'At this width the old fixed canvas would fit — which is exactly the desktop it was designed for, and nothing else.'}
+            : 'At this width the old fixed canvas would fit, which is exactly the desktop it was designed for, and nothing else.'}
         </p>
         <button
           type="button"

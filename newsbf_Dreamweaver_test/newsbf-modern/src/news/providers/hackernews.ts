@@ -3,7 +3,7 @@ import { NewsProviderError } from '../types'
 import { stripHtml, truncate } from '@/lib/text'
 
 /**
- * Hacker News via the Algolia search API — keyless and unauthenticated.
+ * Hacker News via the Algolia search API: keyless and unauthenticated.
  *
  * Included deliberately as the *lossiest* provider in the registry: it carries
  * no images and no summaries. It proves the card layout degrades gracefully
@@ -52,7 +52,7 @@ export const hackerNewsProvider: NewsProvider = {
     const query = QUERIES[sectionId]
     return query === null
       ? 'newest stories by date'
-      : `no desks upstream — rewritten as search "${query}"`
+      : `no desks upstream, rewritten as search "${query}"`
   },
 
   async fetchSection({ sectionId, limit, signal }: ProviderRequest) {

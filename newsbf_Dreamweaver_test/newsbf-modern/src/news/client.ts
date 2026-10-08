@@ -29,7 +29,7 @@ export interface FetchOptions {
   readonly providerId?: ProviderId
   readonly limit?: number
   readonly signal?: AbortSignal
-  /** Skip the cache — used by the reader-facing refresh control. */
+  /** Skip the cache: used by the reader-facing refresh control. */
   readonly force?: boolean
 }
 

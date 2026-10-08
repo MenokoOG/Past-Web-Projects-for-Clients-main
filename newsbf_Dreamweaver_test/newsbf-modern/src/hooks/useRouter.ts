@@ -6,8 +6,8 @@ import { isSectionId } from '@/news/sections'
  * A hash router in forty lines.
  *
  * The original site navigated by loading a whole new document per desk. This
- * restores that mental model — real URLs, a working back button, shareable
- * links — without adding a routing dependency for seven static routes. Hash
+ * restores that mental model, real URLs, a working back button, shareable
+ * links, without adding a routing dependency for seven static routes. Hash
  * routing also means the build deploys to any static host, including a plain
  * folder opened from disk, exactly like the site it replaces.
  */
