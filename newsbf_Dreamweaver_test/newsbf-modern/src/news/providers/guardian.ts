@@ -32,7 +32,7 @@ const DESKS: Readonly<Record<SectionId, DeskMapping>> = {
   front: {
     params: {},
     fidelity: 'native',
-    rationale: 'newest across every section — the front page',
+    rationale: 'newest across every section, the front page',
   },
   news: {
     params: { section: 'us-news|world' },
@@ -47,7 +47,7 @@ const DESKS: Readonly<Record<SectionId, DeskMapping>> = {
   events: {
     params: { section: 'culture' },
     fidelity: 'translated',
-    rationale: 'no events desk upstream — approximated by section = culture',
+    rationale: 'no events desk upstream, approximated by section = culture',
   },
   obituaries: {
     params: { tag: 'tone/obituaries' },
@@ -57,12 +57,12 @@ const DESKS: Readonly<Record<SectionId, DeskMapping>> = {
   social: {
     params: { section: 'lifeandstyle' },
     fidelity: 'translated',
-    rationale: 'no social desk upstream — approximated by section = lifeandstyle',
+    rationale: 'no social desk upstream, approximated by section = lifeandstyle',
   },
   letters: {
     params: { section: 'commentisfree' },
     fidelity: 'translated',
-    rationale: 'no letters desk upstream — approximated by section = commentisfree',
+    rationale: 'no letters desk upstream, approximated by section = commentisfree',
   },
 }
 

@@ -27,7 +27,7 @@ export const SECTIONS: readonly Section[] = [
   {
     id: 'events',
     label: 'Events',
-    blurb: 'What is on this week — fairs, meetings, music and culture.',
+    blurb: 'What is on this week, fairs, meetings, music and culture.',
     legacyPath: 'events.html',
   },
   {
@@ -54,7 +54,7 @@ const BY_ID = new Map<SectionId, Section>(SECTIONS.map((s) => [s.id, s]))
 
 export function getSection(id: SectionId): Section {
   const section = BY_ID.get(id)
-  /* c8 ignore next — SectionId is a closed union, so this cannot happen. */
+  /* c8 ignore next: SectionId is a closed union, so this cannot happen. */
   if (!section) throw new Error(`Unknown section: ${id}`)
   return section
 }

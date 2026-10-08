@@ -9,6 +9,6 @@ const SUFFIX = 'News Bonners Ferry'
  */
 export function useDocumentTitle(title: string): void {
   useEffect(() => {
-    document.title = title ? `${title} — ${SUFFIX}` : SUFFIX
+    document.title = title ? `${title}, ${SUFFIX}` : SUFFIX
   }, [title])
 }

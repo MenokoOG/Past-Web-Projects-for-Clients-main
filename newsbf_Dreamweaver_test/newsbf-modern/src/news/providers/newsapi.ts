@@ -3,7 +3,7 @@ import { NewsProviderError } from '../types'
 import { secureUrl, stripHtml, truncate } from '@/lib/text'
 
 /**
- * NewsAPI.org — free developer plan.
+ * NewsAPI.org: free developer plan.
  *
  * Note the deployment caveat baked into `unavailableReason`: the free plan
  * refuses browser requests from any origin except localhost. Surfacing that in
@@ -49,7 +49,7 @@ function apiKey(): string {
 
 function blockedReason(): string | null {
   if (!apiKey()) {
-    return 'Set VITE_NEWSAPI_KEY in .env.local — free developer plan at newsapi.org.'
+    return 'Set VITE_NEWSAPI_KEY in .env.local, free developer plan at newsapi.org.'
   }
   const host = window.location.hostname
   if (host === 'localhost' || host === '127.0.0.1') return null
@@ -70,7 +70,7 @@ export const newsApiProvider: NewsProvider = {
     const desk = DESKS[sectionId]
     return desk.kind === 'category'
       ? `top-headlines, country = us, category = ${desk.value}`
-      : `no matching category — rewritten as everything?q=${desk.value}`
+      : `no matching category, rewritten as everything?q=${desk.value}`
   },
 
   async fetchSection({ sectionId, limit, signal }: ProviderRequest) {

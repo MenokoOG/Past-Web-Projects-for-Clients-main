@@ -7,7 +7,7 @@
  * shape, so the UI never learns a vendor's vocabulary.
  */
 export interface Article {
-  /** Stable, provider-namespaced id — safe as a React key and a route param. */
+  /** Stable, provider-namespaced id: safe as a React key and a route param. */
   readonly id: string
   readonly title: string
   /** Plain text. Providers that return HTML are sanitized during translation. */
@@ -44,7 +44,7 @@ export interface Section {
   readonly id: SectionId
   readonly label: string
   readonly blurb: string
-  /** The legacy file this desk used to live in — shown in the droid's ledger. */
+  /** The legacy file this desk used to live in: shown in the droid's ledger. */
   readonly legacyPath: string
 }
 

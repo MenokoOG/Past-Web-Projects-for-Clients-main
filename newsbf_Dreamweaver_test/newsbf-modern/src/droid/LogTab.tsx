@@ -15,7 +15,7 @@ const KIND_STYLE: Readonly<Record<TransmissionKind, { label: string; className: 
  * The transmission log.
  *
  * Every line here is emitted by real code in `src/news/client.ts` as the
- * request happens — handshakes, vocabulary translations, cache hits, failures
+ * request happens, handshakes, vocabulary translations, cache hits, failures
  * and automatic fallbacks. Nothing is scripted, which is what makes it useful
  * for demonstrating that the modernization is actually running.
  */

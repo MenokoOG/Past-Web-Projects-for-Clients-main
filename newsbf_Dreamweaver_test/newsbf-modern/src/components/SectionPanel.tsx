@@ -15,8 +15,8 @@ interface SectionPanelProps {
  *
  * main.css declared #recentnews, #Obituary, #social, #letters and #events with
  * the same border, padding and alignment repeated verbatim in each. The blue
- * heading bar and the gold "More" button are preserved on purpose — they are
- * the paper's visual signature — but they are now defined once.
+ * heading bar and the gold "More" button are preserved on purpose, they are
+ * the paper's visual signature, but they are now defined once.
  */
 export function SectionPanel({ title, children, moreSectionId, moreLabel }: SectionPanelProps) {
   return (

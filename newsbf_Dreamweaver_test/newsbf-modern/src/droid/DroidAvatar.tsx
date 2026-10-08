@@ -16,7 +16,7 @@ const EYE: Readonly<Record<DroidMood, string>> = {
  * NB-3O, drawn rather than downloaded.
  *
  * Inline SVG keeps the mascot at one request, zero bytes of image payload, and
- * infinitely sharp on any display — the same argument that retires the legacy
+ * infinitely sharp on any display, the same argument that retires the legacy
  * build's 640x190 masthead JPEG and its GIF social icons.
  */
 export function DroidAvatar({ mood = 'idle', className = '', title }: DroidAvatarProps) {

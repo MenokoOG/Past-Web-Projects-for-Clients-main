@@ -1,7 +1,7 @@
-# News Bonners Ferry — modernized
+# News Bonners Ferry: modernized
 
 A working rebuild of the 2012 Dreamweaver site in the parent directory, driven by
-**NB-3O**, a protocol droid that translates the newsroom between formats — the
+**NB-3O**, a protocol droid that translates the newsroom between formats, the
 legacy build into a modern one, and any news API's wire format into the house
 `Article` shape.
 
@@ -31,7 +31,7 @@ A sample of what is in there:
 
 | Was | Now |
 | --- | --- |
-| No viewport meta tag — phones rendered the 1000px page zoomed out | `width=device-width`, with `viewport-fit=cover` |
+| No viewport meta tag, phones rendered the 1000px page zoomed out | `width=device-width`, with `viewport-fit=cover` |
 | Three float columns at 175 / 490 / 270px, cleared by hand | CSS Grid collapsing to one column below `md` |
 | Header, nav and footer pasted into 14 files | Three components rendered once from a route shell |
 | `text-align: center` on `html, body, p, li` | Left-aligned measure capped at 68 characters |
@@ -46,17 +46,17 @@ Source of truth: [`src/droid/ledger.ts`](src/droid/ledger.ts).
 The five news APIs the droid speaks, each rated for how faithfully it can serve
 the desk currently on screen:
 
-- **Native** — the provider has a real equivalent of that desk.
-- **Translated** — it does not, so the droid rewrites the desk as a keyword
+- **Native**, the provider has a real equivalent of that desk.
+- **Translated**, it does not, so the droid rewrites the desk as a keyword
   query and says so rather than pretending otherwise.
-- **Unavailable** — a key is missing, or the origin is blocked, with the exact
+- **Unavailable**, a key is missing, or the origin is blocked, with the exact
   fix stated.
 
 Selecting a different provider re-renders the whole paper through a different
 wire format with no change to the layout. That is the demonstration.
 
 This tab also overlays the legacy 1000px canvas on the live page and reports how
-far it overflows the current viewport — resize the window with it on.
+far it overflows the current viewport, resize the window with it on.
 
 ### Log
 
@@ -95,7 +95,7 @@ src/
     types.ts       Article, SectionId, NewsProvider, Fidelity
     sections.ts    The seven desks, carried over from the 2012 navigation
     registry.ts    Provider list + availability
-    client.ts      Fetch, cache, fallback — and the droid narration
+    client.ts      Fetch, cache, fallback, and the droid narration
     providers/     One adapter per upstream API
   droid/         NB-3O. The only place that knows about the legacy build.
     ledger.ts      16 audited findings
@@ -108,8 +108,8 @@ src/
 ```
 
 The dependency rule is one-directional: `components` may import from `news` for
-types only; `news` never imports from `components`. That is what makes UC-04 —
-swapping the source at runtime — a two-line change rather than a refactor.
+types only; `news` never imports from `components`. That is what makes UC-04,
+swapping the source at runtime, a two-line change rather than a refactor.
 
 ---
 
@@ -153,7 +153,7 @@ Two settings in [`vite.config.ts`](vite.config.ts) make that work:
 - `outDir` points at the repository root, with `emptyOutDir` opted into
   because the target sits outside the Vite root.
 
-Routing is hash-based, so no server rewrite rule is needed — the build also
+Routing is hash-based, so no server rewrite rule is needed, the build also
 works opened straight from disk. A `.nojekyll` file at the repository root
 keeps Pages from running the output through Jekyll.
 
@@ -181,7 +181,7 @@ TypeScript runs with `strict`, plus `noUncheckedIndexedAccess`,
 `exactOptionalPropertyTypes`, `noImplicitOverride` and `verbatimModuleSyntax`.
 
 Routing is a 40-line hash router
-([`src/hooks/useRouter.ts`](src/hooks/useRouter.ts)) rather than a dependency —
+([`src/hooks/useRouter.ts`](src/hooks/useRouter.ts)) rather than a dependency,
 which also means `dist/` deploys to any static host, or opens from a plain
 folder, exactly like the site it replaces.
 
@@ -189,7 +189,7 @@ folder, exactly like the site it replaces.
 
 ## Documentation
 
-- **[docs/USE-CASES.md](docs/USE-CASES.md)** — the five use cases in full, with
+- **[docs/USE-CASES.md](docs/USE-CASES.md)**, the five use cases in full, with
   actors, preconditions, main and alternate flows, postconditions, a worked
   translation example, non-goals, and a traceability table.
 - The same five are rendered in-app at **About this rebuild** (`#/about`), from

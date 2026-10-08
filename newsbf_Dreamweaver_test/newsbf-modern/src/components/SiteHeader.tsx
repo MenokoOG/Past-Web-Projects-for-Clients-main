@@ -5,7 +5,7 @@ import { hrefFor } from '@/hooks/useRouter'
  * The masthead.
  *
  * The 2012 header was a 990px box holding a 640x190 JPEG of a farm at sunset
- * and a hotlinked http weather widget — 225px of fixed chrome before a phone
+ * and a hotlinked http weather widget, 225px of fixed chrome before a phone
  * reader reached a single headline. This says the same thing in type: the
  * name, the place, and the date, at a height that scales with the viewport.
  */

@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "News Bonners Ferry — modernized. TypeScript + Tailwind, mobile-first, driven by the NB-3O protocol droid.",
+  "description": "News Bonners Ferry, modernized. TypeScript + Tailwind, mobile-first, driven by the NB-3O protocol droid.",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",

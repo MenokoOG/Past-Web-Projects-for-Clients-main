@@ -9,7 +9,7 @@ const LEGACY_CANVAS_PX = 1000
  *
  * Resizing the window with this on is the fastest way to see the actual
  * argument for the rebuild: the guide stays rigid while the paper reflows
- * around it, and below 1000px the guide simply runs off the screen — which is
+ * around it, and below 1000px the guide simply runs off the screen, which is
  * precisely what the old site did to every phone that visited it.
  */
 export function LegacyGuide() {

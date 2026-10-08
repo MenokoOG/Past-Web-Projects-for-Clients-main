@@ -3,7 +3,7 @@ import type { ReactNode } from 'react'
 interface PageShellProps {
   readonly children: ReactNode
   /**
-   * Optional secondary column. On a phone it stacks beneath the story feed —
+   * Optional secondary column. On a phone it stacks beneath the story feed,
    * the reverse of the legacy build, where the 175px advertising rail came
    * first in the source and so appeared above the news on any narrow screen.
    */

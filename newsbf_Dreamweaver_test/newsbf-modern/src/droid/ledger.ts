@@ -4,7 +4,7 @@ import type { LedgerCategory, LedgerEntry } from './types'
  * The translation ledger.
  *
  * Every row is a real finding from the audit of the 2012 Dreamweaver build in
- * the parent directory — not an illustration. The droid reads from this file
+ * the parent directory, not an illustration. The droid reads from this file
  * to explain what it changed and why, which keeps the explanation and the
  * codebase from drifting apart.
  */
@@ -21,7 +21,7 @@ export const LEDGER: readonly LedgerEntry[] = [
   },
   {
     id: 'viewport',
-    legacy: 'No viewport meta tag — phones rendered the 1000px page zoomed out',
+    legacy: 'No viewport meta tag, phones rendered the 1000px page zoomed out',
     legacyPath: 'index.html (head)',
     modern: 'width=device-width, with viewport-fit=cover for notched displays',
     modernPath: 'newsbf-modern/index.html',
@@ -62,7 +62,7 @@ export const LEDGER: readonly LedgerEntry[] = [
   {
     id: 'id-styling',
     legacy:
-      'One bespoke ID rule per content block — recentnews, Obituary, social, letters, events — each repeating the same border and padding',
+      'One bespoke ID rule per content block, recentnews, Obituary, social, letters, events, each repeating the same border and padding',
     legacyPath: 'main.css',
     modern: 'A single reusable SectionPanel component built from Tailwind utilities',
     modernPath: 'src/components/SectionPanel.tsx',
@@ -153,7 +153,7 @@ export const LEDGER: readonly LedgerEntry[] = [
   },
   {
     id: 'page-titles',
-    legacy: 'Generic per-page titles — news.html is titled simply News',
+    legacy: 'Generic per-page titles, news.html is titled simply News',
     legacyPath: 'news.html:6',
     modern: 'Descriptive titles set per route, including the publication name',
     modernPath: 'src/hooks/useDocumentTitle.ts',

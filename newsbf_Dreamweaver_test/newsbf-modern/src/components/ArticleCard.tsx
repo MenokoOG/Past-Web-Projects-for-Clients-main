@@ -17,7 +17,7 @@ interface ArticleCardProps {
  * Two legacy problems are fixed here structurally rather than cosmetically.
  * First, images are sized with aspect-ratio instead of width and height
  * attributes, so one card serves every breakpoint. Second, a broken image is
- * caught and the card reflows into its text-only form — the original left a
+ * caught and the card reflows into its text-only form, the original left a
  * broken-icon placeholder wherever an http asset was blocked, which was most
  * of them.
  */
