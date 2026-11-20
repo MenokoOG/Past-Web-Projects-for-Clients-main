@@ -47,9 +47,23 @@ export interface FetchResult {
  * The narration is the point: every entry the reader sees in the log is a real
  * event from this function, not a scripted animation.
  */
-export async function fetchSection(
+export function fetchSection(
   sectionId: SectionId,
   options: FetchOptions = {},
+): Promise<FetchResult> {
+  return fetchFrom(sectionId, options, new Set())
+}
+
+/**
+ * `tried` holds every provider that has already failed during this one request,
+ * so the fallback chain can only move forward. Without it, two failing keyless
+ * providers (a reader who is offline, say) hand the request back and forth
+ * forever.
+ */
+async function fetchFrom(
+  sectionId: SectionId,
+  options: FetchOptions,
+  tried: ReadonlySet<ProviderId>,
 ): Promise<FetchResult> {
   const providerId = options.providerId ?? DEFAULT_PROVIDER_ID
   const limit = options.limit ?? 12
@@ -82,7 +96,7 @@ export async function fetchSection(
       providerId,
       sectionId,
     })
-    return fallback(sectionId, providerId, limit, options.signal)
+    return fallback(sectionId, providerId, limit, options.signal, tried)
   }
 
   const fidelity = provider.fidelity(sectionId)
@@ -107,9 +121,14 @@ export async function fetchSection(
   const startedAt = performance.now()
   try {
     const controller = new AbortController()
-    options.signal?.addEventListener('abort', () => {
-      controller.abort()
-    })
+    if (options.signal?.aborted) controller.abort()
+    options.signal?.addEventListener(
+      'abort',
+      () => {
+        controller.abort()
+      },
+      { once: true },
+    )
     const articles = await provider.fetchSection({
       sectionId,
       limit,
@@ -150,7 +169,7 @@ export async function fetchSection(
       sectionId,
       durationMs: Math.round(performance.now() - startedAt),
     })
-    return fallback(sectionId, providerId, limit, options.signal)
+    return fallback(sectionId, providerId, limit, options.signal, tried)
   }
 }
 
@@ -164,10 +183,12 @@ async function fallback(
   failedId: ProviderId,
   limit: number,
   signal: AbortSignal | undefined,
+  tried: ReadonlySet<ProviderId>,
 ): Promise<FetchResult> {
+  const exhausted = new Set(tried).add(failedId)
   const candidates: readonly ProviderId[] = ['spaceflight', 'hackernews', 'guardian']
   const next = candidates.find(
-    (id) => id !== failedId && getProvider(id).unavailableReason() === null,
+    (id) => !exhausted.has(id) && getProvider(id).unavailableReason() === null,
   )
 
   if (!next) {
@@ -182,11 +203,15 @@ async function fallback(
     sectionId,
   })
 
-  const result = await fetchSection(sectionId, {
-    providerId: next,
-    limit,
-    ...(signal ? { signal } : {}),
-  })
+  const result = await fetchFrom(
+    sectionId,
+    {
+      providerId: next,
+      limit,
+      ...(signal ? { signal } : {}),
+    },
+    exhausted,
+  )
   return { ...result, fellBackFrom: failedId }
 }
 
